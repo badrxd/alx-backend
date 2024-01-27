@@ -54,7 +54,7 @@ class Server:
         next_pg = None if end > ln else page+1
 
         return {
-            'page_size': page_size,
+            'page_size': 0 if end > ln else page_size,
             'page': page,
             'data': arr,
             'next_page': next_pg,
