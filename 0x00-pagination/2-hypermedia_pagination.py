@@ -49,12 +49,26 @@ class Server:
         """ """
         ln = len(self.dataset())
         arr = self.get_page(page, page_size)
-        prev_pg = None if page <= 1 else page
+        start, end = index_range(page, page_size)
+        prev_pg = None if page <= 1 else page-1
+        next_pg = None if end > ln else page+1
+
         return {
             'page_size': page_size,
             'page': page,
             'data': arr,
-            'next_page': page+1,
+            'next_page': next_pg,
             'prev_page': prev_pg,
             'total_pages': math.ceil(ln/page_size)
         }
+
+
+server = Server()
+
+print(server.get_hyper(1, 2))
+print("---")
+print(server.get_hyper(2, 2))
+print("---")
+print(server.get_hyper(100, 3))
+print("---")
+print(server.get_hyper(3000, 100))
