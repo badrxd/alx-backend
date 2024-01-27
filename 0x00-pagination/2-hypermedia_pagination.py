@@ -56,5 +56,5 @@ class Server:
             'data': arr,
             'next_page': page+1,
             'prev_page': prev_pg,
-            'prev_pg': math.ceil(ln/page_size)
+            'total_pages': math.ceil(ln/page_size)
         }
