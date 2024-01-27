@@ -1,1 +1,2 @@
 *.csv
+.mypy_cache
