@@ -47,17 +47,20 @@ class Server:
 
     def get_hyper(self, page: int = 1, page_size: int = 10) -> Dict:
         """ """
-        ln = len(self.dataset())
-        arr = self.get_page(page, page_size)
-        start, end = index_range(page, page_size)
-        prev_pg = None if page <= 1 else page-1
-        next_pg = None if end > ln else page+1
+        try:
+            ln = len(self.dataset())
+            arr = self.get_page(page, page_size)
+            start, end = index_range(page, page_size)
+            prev_pg = None if page <= 1 else page-1
+            next_pg = None if end > ln else page+1
 
-        return {
-            'page_size': 0 if end > ln else page_size,
-            'page': page,
-            'data': arr,
-            'next_page': next_pg,
-            'prev_page': prev_pg,
-            'total_pages': math.ceil(ln/page_size)
-        }
+            return {
+                'page_size': 0 if end > ln else page_size,
+                'page': page,
+                'data': arr,
+                'next_page': next_pg,
+                'prev_page': prev_pg,
+                'total_pages': math.ceil(ln/page_size)
+            }
+        except:
+            pass
