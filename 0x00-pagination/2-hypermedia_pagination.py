@@ -46,7 +46,7 @@ class Server:
         return data[start:end]
 
     def get_hyper(self, page: int = 1, page_size: int = 10) -> Dict:
-        """ """
+        """returns a dictionary containing the following key-value pairs:"""
         try:
             ln = len(self.dataset())
             arr = self.get_page(page, page_size)
@@ -62,5 +62,5 @@ class Server:
                 'prev_page': prev_pg,
                 'total_pages': math.ceil(ln/page_size)
             }
-        except:
+        except Exception:
             pass
