@@ -39,15 +39,13 @@ class Server:
             }
         return self.__indexed_dataset
 
-    def get_hyper_index(self, index: Optional[int] = None,
+    def get_hyper_index(self, index: int = None,
                         page_size: int = 10) -> Dict:
-        """ return """
+        """return a dictionary with the following key-value pairs"""
         ln = len(self.__indexed_dataset)
         assert index is None or (type(index) is int and 0 <= index < ln)
         assert type(page_size) is int and page_size > 0
-        if index is None:
-            return {}
-        current_index = index
+        current_index = 0 if index is None else index
         arr: List = []
         i = current_index
         while len(arr) < page_size:
