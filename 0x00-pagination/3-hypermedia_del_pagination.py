@@ -44,6 +44,8 @@ class Server:
         """ return """
         ln = len(self.__indexed_dataset)
         assert index is None or 0 <= index < ln
+        assert type(index) is int
+        assert type(page_size) is int
         current_index = 0 if index is None else index
         arr: List = []
         i = current_index
