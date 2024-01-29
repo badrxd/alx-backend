@@ -43,9 +43,8 @@ class Server:
                         page_size: int = 10) -> Dict:
         """ return """
         ln = len(self.__indexed_dataset)
-        assert index is None or 0 <= index < ln
-        assert type(index) is int
-        assert type(page_size) is int
+        assert index is None or (type(index) is int and 0 <= index < ln)
+        assert type(page_size) is int and page_size > 0
         current_index = 0 if index is None else index
         arr: List = []
         i = current_index
