@@ -38,4 +38,7 @@ class LRUCache(BaseCaching):
         '''return the value in self.cache_data linked to key'''
         if key is None or key not in self.cache_data.keys():
             return None
+        self.items.pop(key)
+        self.counter += 1
+        self.items[key] = self.counter
         return self.cache_data[key]
