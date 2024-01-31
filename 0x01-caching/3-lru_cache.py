@@ -33,7 +33,6 @@ class LRUCache(BaseCaching):
         self.cache_data[key] = item
         self.items[key] = self.counter
         self.counter += 1
-        print(self.items)
 
     def get(self, key):
         '''return the value in self.cache_data linked to key'''
