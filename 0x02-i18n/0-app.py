@@ -1,11 +1,15 @@
-#!/usr/bin/python3
-"""flask app"""
+#!/usr/bin/env python3
+"""flask app
+"""
 from flask import Flask, render_template
 app = Flask(__name__)
 
 
 @app.route("/", strict_slashes=False)
-def hello_world():
+def index() -> str:
+    """
+    return Hello world
+    """
     return render_template('0-index.html')
 
 
