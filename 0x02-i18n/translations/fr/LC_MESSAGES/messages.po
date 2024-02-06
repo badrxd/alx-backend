@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2024-02-06 19:37+0100\n"
-"PO-Revision-Date: 2024-02-06 19:37+0100\n"
+"POT-Creation-Date: 2024-02-06 20:02+0100\n"
+"PO-Revision-Date: 2024-02-06 20:02+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: fr\n"
 "Language-Team: fr <LL@li.org>\n"
@@ -20,7 +20,6 @@ msgstr ""
 
 msgid "home_title"
 msgstr "Bienvenue chez Holberton"
-
 
 msgid "home_header"
 msgstr "Bonjour monde!"
