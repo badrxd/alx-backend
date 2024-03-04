@@ -1,3 +1,5 @@
 *.csv
 .mypy_cache
 __pycache__
+redis-6.0.10
+redis-6.0.10.tar.gz
