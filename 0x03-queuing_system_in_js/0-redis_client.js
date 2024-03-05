@@ -9,4 +9,5 @@ const checkConnection = () => {
       console.log(`Redis client not connected to the server: ${err}`)
     );
 };
+
 checkConnection();
